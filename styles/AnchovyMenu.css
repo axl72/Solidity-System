@@ -1,0 +1,95 @@
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual ancho */
+    grid-template-rows: auto; /* Altura automática para las filas */
+    gap: 20px; /* Espacio entre las celdas */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Estilos adicionales para el contenedor principal */
+    padding: 20px;
+}
+
+.header-menu {
+    grid-column: 1 / span 4; /* Ocupa desde la columna 1 hasta la columna 4 */
+    background-color: #11102459;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -20px;
+    padding: 20px;
+    height: 100px;
+}
+
+.form-menu {
+    grid-column: 1 / span 2; /* Formulario ocupa desde la columna 1 hasta la columna 2 */
+    padding: 20px;
+}
+
+.list-items {
+    grid-column: 3 / span 2; /* Lista ocupa desde la columna 3 hasta la columna 4 */
+    padding: 5px;
+    overflow: auto;
+    max-height: 730px;
+    width: 500px;
+    margin: 10px 10px 10px 0px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.item-list {
+    background-color: #343942;
+    border-radius: 15px;
+    margin: 10px 10px 10px 0px;
+    padding: 20px;
+    width: 450px;
+}
+
+.menu-button {
+    margin: 10px;
+    background: #9a9898;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+
+    box-shadow: 0px 0px 20px black;
+    &:hover {
+        outline-style: solid;
+        outline-width: 4px;
+        outline-color: #202328;
+        border-color: #202328;
+        box-shadow: 0px 0px 40px black;
+        color: white;
+    }
+}
+
+.logout-button {
+    background: rgb(214, 66, 66);
+    color: white;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.form-add-anchovy-batch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #343942;
+    margin: 25px 0px 10px 10px;
+    width: 310px;
+    border-radius: 15px;
+}
+
+.wallet-container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #bbb3b3;
+}
