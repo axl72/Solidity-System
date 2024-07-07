@@ -10,7 +10,6 @@ export const useFetchFishmeal = () => {
     try {
       await window.ethereum.request({ method: "eth_requestAccounts" });
       const web3provider = window.ethereum;
-
       const web3 = new Web3(web3provider);
       const networkId = await web3.eth.net.getId();
       const deployedNetwork = await MyContractArtifact.networks[networkId];
@@ -26,14 +25,12 @@ export const useFetchFishmeal = () => {
       const scaleFactorNumber = await parseInt(scaleFactor);
       for (let i = 1; i <= fishmeal_batch_counter_number; i++) {
         const fishmealBatch = await contract.methods.fishmeal_batches(i).call();
-        console.log(fishmealBatch);
-        const id = fishmealBatch.id;
+        const id = Number(fishmealBatch.id);
         const processorName = fishmealBatch.processor_name;
         const kilograms =
           BigInt(fishmealBatch.kilograms) / BigInt(scaleFactorNumber);
-        // Todo: Corregir nombre cratedAt por createdAt
         const createdAt = new Date(
-          Number(BigInt(fishmealBatch.craetedAt) * BigInt(1000))
+          Number(BigInt(fishmealBatch.createdAt) * BigInt(1000))
         );
         const exist = fishmealBatch.exits;
         const newAnchovyBatch = {
@@ -45,7 +42,7 @@ export const useFetchFishmeal = () => {
         };
         newFishmealBatches.push(newAnchovyBatch);
       }
-      setFishmealBatches(newFishmealBatches);
+      await setFishmealBatches(newFishmealBatches);
       setIsLoading(false);
     } catch (error) {
       console.error("Error al cargar lotes de anchovetas:", error);
@@ -56,7 +53,6 @@ export const useFetchFishmeal = () => {
   useEffect(() => {
     getFishmealBatches();
   }, []);
-
   return {
     fishmealBatches,
     isLoading,

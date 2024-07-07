@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 export const FishmealCard = ({ procesorName, kilograms, createdAt, exist }) => {
   return (
     <>
-      <article>
+      <article className="itemlist-card">
         <strong>{procesorName}</strong>
         <span>{kilograms}</span>
         <span>{createdAt}</span>

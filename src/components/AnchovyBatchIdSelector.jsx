@@ -13,7 +13,13 @@ export const AnchovyBatchIdSelector = ({
   };
   return (
     <>
-      <select value={anchovyBatchId} name="" id="" onChange={handleOnChange}>
+      <select
+        value={anchovyBatchId}
+        name=""
+        id=""
+        onChange={handleOnChange}
+        className=""
+      >
         <option value={0}>LOTE DE ANCHOVETA</option>
         {anchovyBatches.map(
           ({ id, enterprise, kilograms, fishingArea, createdAt, exist }) => (

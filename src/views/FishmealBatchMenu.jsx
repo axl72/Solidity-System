@@ -37,6 +37,7 @@ export const FishmealBatchMenu = () => {
     window.location.reload();
   };
 
+  //Todo: reemplazar toda es función por un hook personalizado
   useEffect(() => {
     const setupWeb3Provider = async () => {
       if (window.ethereum) {
@@ -55,8 +56,8 @@ export const FishmealBatchMenu = () => {
 
   return (
     <>
-      <header>
-        <section>
+      <header className="fishmeal-menu-header">
+        <section className="wallet-section">
           <span>Wallet</span>
           <strong>{accountState}</strong>
         </section>
@@ -64,20 +65,27 @@ export const FishmealBatchMenu = () => {
           Logout
         </button>
       </header>
-      <section>
+      <section className="menu-section">
         <main>
-          <form action="" onSubmit={handleOnSubmit}>
+          <form
+            action=""
+            onSubmit={handleOnSubmit}
+            className="flex-column fishmeal-form"
+          >
+            <header>Registra un Lote de Harina</header>
             <input
               type="text"
               name="processorName"
               value={processorName}
               onChange={onChange}
+              placeholder="Nombre de la procesadora"
             />
             <input
               type="number"
               name="kilograms"
               value={kilograms}
               onChange={onChange}
+              placeholder="Cantidad de Kilogramos: 978.56"
             />
             <AnchovyBatchIdSelector
               anchovyBatchId={anchovyBatchId}
@@ -86,7 +94,7 @@ export const FishmealBatchMenu = () => {
             <button>Registrar</button>
           </form>
         </main>
-        <aside>
+        <aside className="fishmeal-list">
           <FishmealBatchList />
         </aside>
       </section>

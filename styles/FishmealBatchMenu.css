@@ -1,0 +1,110 @@
+.fishmeal-menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #0c0436;
+    padding: 20px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.fishmeal-form {
+    width: 400px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 35px;
+    background: #282c34;
+    border-radius: 20px;
+    box-shadow: 0px 0px 100px black;
+
+    & header {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    & input,
+    select,
+    button {
+        width: 275px;
+        height: 28px;
+        margin: 5px;
+        border-radius: 10px;
+        padding: 4px;
+    }
+
+    & select {
+        height: 35px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    & button {
+        width: 240px;
+        height: 35px;
+        margin: 20px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+
+.wallet-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 120px;
+
+    & span,
+    strong {
+        display: block;
+        width: 20px;
+        font-size: 24px;
+    }
+}
+
+.fishmeal-list {
+    display: grid;
+    width: 100%;
+    height: 75vh;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    overflow-wrap: auto;
+    gap: 30px 5px 30px;
+    margin: 40px;
+    padding: 20px;
+    direction: rtl;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: row;
+
+    & .itemlist-card {
+        background: #282c34;
+        width: 270px;
+        height: 150px;
+        box-shadow: 0px 0px 50px black;
+        border-radius: 20px;
+        display: flex;
+        direction: ltr;
+        flex-direction: column;
+
+        & strong {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        & span {
+            padding: 5px;
+        }
+    }
+}
