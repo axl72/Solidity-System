@@ -5,7 +5,7 @@ import MyContractArtifact from "../../public/FishmealTraceability.json";
 export const useFetchAnchovy = () => {
   const [anchovyBatches, setAnchovyBatchs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  // Todo: cambiar el nombre
   const getTasks = async () => {
     try {
       await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -36,7 +36,6 @@ export const useFetchAnchovy = () => {
         const createdAt = new Date(
           Number(BigInt(anchovyBatch.createdAt) * BigInt(1000))
         );
-        //Todo: Cambiar exits por exist
         const exist = anchovyBatch.exits;
         const newAnchovyBatch = {
           id,
