@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { Login } from "./views/Login";
 import { AuthProvider } from "./hooks/AuthContext";
+import { DetailsView } from "./views/DetailsView";
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<Navigate to="/login" />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path={`/details`} element={<DetailsView />} />
         </Routes>
       </Router>
     </AuthProvider>
