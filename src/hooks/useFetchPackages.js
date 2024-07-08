@@ -42,12 +42,12 @@ export const useFetchPackages = () => {
         const createdAt = fishmealPackagesBatch.createdAt;
         const exist = fishmealPackagesBatch.exist;
         const newFishmealPackagesBatch = {
-          id,
+          id: Number(id),
           distributor,
-          fishmealBatchId,
-          initPackagesId,
-          finalPackagesId,
-          packagesCount: packagesCount,
+          fishmealBatchId: Number(fishmealBatchId),
+          initPackagesId: Number(initPackagesId),
+          finalPackagesId: Number(finalPackagesId),
+          packagesCount: Number(packagesCount),
           createdAt: new Date(Number(BigInt(createdAt)*BigInt(1000))).toString(),
           exist,
         };

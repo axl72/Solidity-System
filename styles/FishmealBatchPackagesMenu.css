@@ -1,0 +1,127 @@
+.fishmeal-packages-header {
+    background: #610934;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    & main {
+        display: inherit;
+        align-items: center;
+    }
+}
+
+.packages-menu-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+
+    & button {
+        background: #282c34;
+        box-shadow: 0px 0px 50px black;
+        border-style: hidden;
+        border-radius: 10px;
+        color: white;
+    }
+}
+
+.packages-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.fishmeal-package-card {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-style: hidden;
+    box-shadow: 0px 0px 50px black;
+    border-radius: 20px;
+    margin: 10px;
+
+    & div {
+        padding: 10px;
+        & label {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px;
+
+            color: #e4e4e4;
+            & span {
+                font-weight: bold;
+                color: white;
+            }
+        }
+    }
+
+    & button {
+        padding: 10px;
+        margin: 10px;
+        background: #0c0156;
+        outline: white 3px solid;
+        &:hover {
+            background-color: #1e05c0;
+
+            outline: white 4px solid;
+        }
+    }
+}
+
+.add-packages-batch-button {
+    width: 200px;
+    height: 100px;
+    &:hover {
+        background: #b8b8b8;
+        color: #282c34;
+        border: white solid;
+    }
+}
+
+.packages-batch-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    height: 105px;
+    padding: 50px;
+    box-shadow: 0px 0px 50px black;
+    border-radius: 20px;
+}
+
+.modal-qr {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background: #282c34;
+    z-index: 2;
+    & a {
+        font-weight: bold;
+        margin: 15px;
+        color: rgb(250, 108, 131);
+    }
+
+    & button {
+        width: 100px;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* display: none; */
+    z-index: 1;
+}

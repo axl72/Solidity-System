@@ -4,6 +4,7 @@ import "../styles/Login.css";
 import "../styles/AnchovyMenu.css";
 import "../styles/FishmealBatchMenu.css";
 import "../styles/App.css";
+import "../styles/FishmealBatchPackagesMenu.css";
 import { App } from "./App.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

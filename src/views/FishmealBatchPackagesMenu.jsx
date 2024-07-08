@@ -13,47 +13,57 @@ export const FishmealBatchPackagesMenu = () => {
   const { modalState, handleModalOnOpen, handleModalOnClose } = useModalState();
   const { accountState } = useAccountState();
   const { fishmealPackages } = useFetchPackages();
-  console.log(fishmealPackages);
 
   return (
     <>
-      <header>
+      <header className="fishmeal-packages-header">
         <main>
-          <span>Wallet</span>
-          <span>{accountState}</span>
+          <span className="wallet-section">Wallet</span>
+          <strong>{accountState}</strong>
         </main>
-        <button onClick={handleOnLogout}>Logout</button>
+        <button className="logout-button menu-button" onClick={handleOnLogout}>
+          Logout
+        </button>
       </header>
-      <section>
-        <button onClick={handleModalOnOpen}>Agregar Lote de Paquetes</button>
+      <section className="packages-menu-section">
+        <div className="packages-batch-button-container">
+          <button
+            className="add-packages-batch-button"
+            onClick={handleModalOnOpen}
+          >
+            Agregar Lote de Paquetes
+          </button>
+        </div>
         <FormAddFishmealPackagesBatch
           isOpen={modalState}
           handleModalOnClose={handleModalOnClose}
           account={accountState}
         />
-        <section>
+        <section className="packages-section">
           {fishmealPackages.map(
             ({
               id,
               distributor,
-              fishmealBatchId,
+              // fishmealBatchId,
               initPackagesId,
               finalPackagesId,
               packagesCount,
               createdAt,
               exist,
-            }) => (
-              <FishmealPackagesCard
-                key={id}
-                distributor={distributor}
-                fishmealBatchId={fishmealBatchId}
-                initPackagesId={initPackagesId}
-                finalPackagesId={finalPackagesId}
-                packagesCount={packagesCount}
-                createdAt={createdAt}
-                exist={exist}
-              />
-            )
+            }) => {
+              return (
+                <FishmealPackagesCard
+                  key={id}
+                  distributor={distributor}
+                  fishmealBatchId={id}
+                  initPackagesId={initPackagesId}
+                  finalPackagesId={finalPackagesId}
+                  packagesCount={packagesCount}
+                  createdAt={createdAt}
+                  exist={exist}
+                />
+              );
+            }
           )}
         </section>
       </section>
