@@ -13,7 +13,11 @@ export const FishmealBatchSelector = ({
   };
 
   return (
-    <select value={fishmealBatchId} onChange={handleOnChange}>
+    <select
+      value={fishmealBatchId}
+      onChange={handleOnChange}
+      className="fishmeal-batch-selector"
+    >
       <option value={0}>Selecciona un Lote de Harina</option>
       {fishmealBatches.map(
         ({ id, processorName, kilograms, createdAt, exist }) => (

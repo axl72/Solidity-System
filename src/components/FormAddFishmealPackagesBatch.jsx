@@ -33,28 +33,34 @@ export const FormAddFishmealPackagesBatch = ({
   };
 
   return (
-    <dialog open={isOpen}>
-      <FishmealBatchSelector
-        fishmealBatchId={fishmealBatchId}
-        setFishmealBatchId={setFishmealBatchId}
-      />
-      <input
-        type="text"
-        placeholder="Distribuidora"
-        name="distributor"
-        value={distributor}
-        onChange={onChange}
-      />
-      <input
-        type="number"
-        placeholder="Cantidad de paquetes"
-        name="packagesCount"
-        value={packagesCount}
-        onChange={onChange}
-      />
-      <button onClick={handleOnRegister}>Registrar</button>
-      <button onClick={handleModalOnClose}>Cerrar Modal</button>
-    </dialog>
+    <>
+      <dialog open={isOpen} className="fishmeal-packages-form-dialog">
+        <div className="add-fishmeal-packages-form">
+          <h1>Formulario de Registro</h1>
+          <FishmealBatchSelector
+            fishmealBatchId={fishmealBatchId}
+            setFishmealBatchId={setFishmealBatchId}
+          />
+          <input
+            type="text"
+            placeholder="Distribuidora"
+            name="distributor"
+            value={distributor}
+            onChange={onChange}
+          />
+          <input
+            type="number"
+            placeholder="Cantidad de paquetes"
+            name="packagesCount"
+            value={packagesCount}
+            onChange={onChange}
+          />
+          <button onClick={handleOnRegister}>Registrar</button>
+          <button onClick={handleModalOnClose}>Cerrar</button>
+        </div>
+      </dialog>
+      <div className={isOpen ? "overlay" : ""}></div>
+    </>
   );
 };
 
