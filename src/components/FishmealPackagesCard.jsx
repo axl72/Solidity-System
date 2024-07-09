@@ -6,6 +6,7 @@ import { es } from "date-fns/locale";
 
 export const FishmealPackagesCard = ({
   distributor = "distribuidor",
+  fishmealPackageId,
   fishmealBatchId = 1,
   packagesCount = 1000,
   createdAt = new Date().toISOString(),
@@ -41,6 +42,9 @@ export const FishmealPackagesCard = ({
       <dialog open={modalState}>
         <div className={`modal-qr`}>
           <QRComponent
+            fishmealPackageId={fishmealBatchId}
+            anchovyBatchId={detailsState.anchovyBatchId}
+            fishmealBatchId={detailsState.fishmealBatchId}
             fishmealBatchKilograms={detailsState.fishmealBatchKilograms}
             processor_name={detailsState.processor_name}
             fishmealBatchExist={detailsState.fishmealBatchExist}

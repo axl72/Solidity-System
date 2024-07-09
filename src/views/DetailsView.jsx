@@ -19,6 +19,9 @@ export const DetailsView = () => {
   const distributor = queryParams.get("distributor");
   const createdAt = queryParams.get("createdAt");
   const packagesCount = Number(queryParams.get("packagesCount"));
+  const fishmealBatchId = Number(queryParams.get("fishmealBatchId"));
+  const anchovyBatchId = Number(queryParams.get("anchovyBatchId"));
+  const fishmealPackageId = Number(queryParams.get("fishmealPackageId"));
 
   const navigate = useNavigate();
   const handleOnClick = () => {
@@ -30,19 +33,14 @@ export const DetailsView = () => {
       <section className="details-view">
         <main>
           <h1>Detalles del producto</h1>
+          <header>LOTE DE ANCHOVETA</header>{" "}
           <label htmlFor="">
-            Cantidad de kilogramos del Lote Harina de pescado:
-            <span>{fishmealBatchKilograms}</span>
+            Código del lote de anchoveta:{" "}
+            <span>{`anchovy-batch-${anchovyBatchId}`}</span>
           </label>
-          <label htmlFor="">Nombre de la Planta Procesadora:</label>
-          <span>{processor_name}</span>
-          <label>Existencia del Lote:</label>
-          <span>{fishmealBatchExist.toString()}</span>
-          <label htmlFor="">Fecha de creación del Lote de Harina:</label>
-          <span>{fishmealBatchCreatedAt.toString()}</span>
           <label htmlFor="">
             Cantidad de kilogramos del Lote de Anchovetas:
-            <span>{anchovyBatchKilograms}</span>
+            <span>{`${anchovyBatchKilograms} Kg.`}</span>
           </label>
           <label htmlFor="">Empresa pesquera:</label>
           <span>{enterprise}</span>
@@ -50,10 +48,30 @@ export const DetailsView = () => {
             Lugar donde fue pescado el lote de anchovetas
           </label>
           <span>{fishingArea}</span>
-          <label htmlFor="">Existencia del lote de anchovetas: </label>
-          <span>{anchovyBatchExist.toString()}</span>
           <label htmlFor="">Fue pescado: </label>
           <span>{anchovyBatchCreatedAt.toString()}</span>
+          <label htmlFor="">Existencia del lote de anchovetas: </label>
+          <span>{anchovyBatchExist.toString()}</span>
+          <header>LOTE DE HARINA DE PESCADO</header>
+          <label htmlFor="">
+            Codigo del lote de harina:{" "}
+            <span>{`fishmeal-batch-${fishmealBatchId}`}</span>
+          </label>
+          <label htmlFor="">
+            Kilogramos del Lote Harina de pescado:
+            <span>{`${fishmealBatchKilograms} Kg.`}</span>
+          </label>
+          <label htmlFor="">Planta Procesadora:</label>
+          <span>{processor_name}</span>
+          <label>Existencia del Lote:</label>
+          <span>{fishmealBatchExist.toString()}</span>
+          <label htmlFor="">Fecha de creación del Lote de Harina:</label>
+          <span>{fishmealBatchCreatedAt.toString()}</span>
+          <header>PAQUETES DE HARINA</header>
+          <label htmlFor="">
+            Código del lote de paquetes:{" "}
+            <span>{`fishmeal-packages-${fishmealPackageId}`}</span>
+          </label>
           <label htmlFor="">Empresa distribuidora</label>
           <span>{distributor}</span>
           <label htmlFor="">Este producto fue distribuido: </label>

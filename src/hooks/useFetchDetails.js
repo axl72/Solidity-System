@@ -35,12 +35,14 @@ export const useFetchDetails = (fishmealBatchId) => {
       // Todo: validar los datos de los details
 
       const {
+        id: _fishmealBatchId,
         kilograms: fishmealBatchKilograms,
         processor_name,
         exist: fishmealBatchExist,
         createdAt: fishmealBatchCreatedAt,
       } = fishmealBatch;
       const {
+        id: anchovyBatchId,
         kilograms: anchovyBatchKilograms,
         enterprise,
         fishingArea,
@@ -49,6 +51,8 @@ export const useFetchDetails = (fishmealBatchId) => {
       } = anchovyBatch;
 
       const details = {
+        fishmealBatchId: Number(_fishmealBatchId),
+        anchovyBatchId: Number(anchovyBatchId),
         fishmealBatchKilograms: Number(fishmealBatchKilograms),
         processor_name,
         fishmealBatchExist,

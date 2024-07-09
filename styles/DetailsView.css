@@ -14,6 +14,15 @@
         justify-content: space-evenly;
         border-radius: 20px;
 
+        & header {
+            width: 300px;
+            font-size: 18px;
+            margin: 10px 0px 20px;
+            font-weight: bold;
+            border-bottom: white;
+            border-bottom-style: solid;
+        }
+
         & label {
             display: flex;
             flex-direction: row;

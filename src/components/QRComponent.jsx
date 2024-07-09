@@ -14,6 +14,9 @@ export const QRComponent = ({
   distributor,
   createdAt,
   packagesCount,
+  fishmealBatchId,
+  anchovyBatchId,
+  fishmealPackageId,
 }) => {
   const url = `/details?distributor=${encodeURIComponent(
     distributor
@@ -29,15 +32,21 @@ export const QRComponent = ({
     anchovyBatchKilograms
   )}&enterprise=${encodeURIComponent(
     enterprise
-  )},&fishingArea=${encodeURIComponent(
+  )}&fishingArea=${encodeURIComponent(
     fishingArea
-  )},&anchovyBatchExist=${encodeURIComponent(
+  )}&anchovyBatchExist=${encodeURIComponent(
     anchovyBatchExist
-  )},&anchovyBatchCreatedAt=${encodeURIComponent(
+  )}&anchovyBatchCreatedAt=${encodeURIComponent(
     anchovyBatchCreatedAt
-  )},&createdAt=${encodeURIComponent(
+  )}&createdAt=${encodeURIComponent(
     createdAt
-  )},&packagesCount=${encodeURIComponent(packagesCount)}`;
+  )}&packagesCount=${encodeURIComponent(
+    packagesCount
+  )}&fishmealBatchId=${encodeURIComponent(
+    fishmealBatchId
+  )}&anchovyBatchId=${encodeURIComponent(
+    anchovyBatchId
+  )}&fishmealPackageId=${encodeURIComponent(fishmealPackageId)}`;
   return (
     <>
       {/* ?distributor=${encodeURIComponent(distributor)}&fishmealId=${encodeURIComponent(fishmealId)}&packagesCount=${encodeURIComponent(packagesCount)}&createdAt=${encodeURIComponent(createdAt)}&exist=${encodeURIComponent(exist)}`} */}
@@ -60,4 +69,6 @@ QRComponent.propTypes = {
   distributor: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
   packagesCount: PropTypes.number.isRequired,
+  fishmealBatchId: PropTypes.number.isRequired,
+  anchovyBatchId: PropTypes.number.isRequired,
 };

@@ -44,7 +44,7 @@ export const FishmealBatchPackagesMenu = () => {
             ({
               id,
               distributor,
-              // fishmealBatchId,
+              fishmealBatchId,
               initPackagesId,
               finalPackagesId,
               packagesCount,
@@ -55,7 +55,8 @@ export const FishmealBatchPackagesMenu = () => {
                 <FishmealPackagesCard
                   key={id}
                   distributor={distributor}
-                  fishmealBatchId={id}
+                  fishmealPackageId={id}
+                  fishmealBatchId={fishmealBatchId}
                   initPackagesId={initPackagesId}
                   finalPackagesId={finalPackagesId}
                   packagesCount={packagesCount}
