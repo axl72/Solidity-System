@@ -1,4 +1,5 @@
 import QRCode from "qrcode.react";
+import PropTypes from "prop-types";
 
 export const QRComponent = ({
   fishmealBatchKilograms,
@@ -44,4 +45,19 @@ export const QRComponent = ({
       <a href={url}>Link del QR</a>
     </>
   );
+};
+
+QRComponent.propTypes = {
+  fishmealBatchKilograms: PropTypes.number.isRequired,
+  processor_name: PropTypes.string.isRequired,
+  fishmealBatchExist: PropTypes.bool.isRequired,
+  fishmealBatchCreatedAt: PropTypes.string.isRequired,
+  anchovyBatchKilograms: PropTypes.number.isRequired,
+  enterprise: PropTypes.string.isRequired,
+  fishingArea: PropTypes.string.isRequired,
+  anchovyBatchExist: PropTypes.bool.isRequired,
+  anchovyBatchCreatedAt: PropTypes.string.isRequired,
+  distributor: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  packagesCount: PropTypes.number.isRequired,
 };
