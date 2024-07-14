@@ -30,14 +30,14 @@ Block chain posee muchas ventajas como su seguridad, transparencia, inmutabilida
 
    <br>
 
-   <div style="display:flex;gap:10px; justify-content: space-evenly;flex-direction:row;">
+   <div style="display:grid;gap:10px; justify-content: space-evenly;grid-template-colums: 1fr 1fr 1fr;">
      
-      <img style="width:auto;height:300px" src="./image.png">
+      <img style="width:auto;height:200px" src="./image.png">
      
   
-      <img style="width:auto;height:300px" src="./image-1.png">
+      <img style="width:auto;height:200px" src="./image-1.png">
   
-      <img style="width:auto;height:300px" src="./image-2.png">
+      <img style="width:auto;height:200px" src="./image-2.png">
       
    </div>
 
