@@ -30,13 +30,15 @@ Block chain posee muchas ventajas como su seguridad, transparencia, inmutabilida
 
    <br>
 
-   <div style="display:flex;height:200px;gap:10px; justify-content: space-evenly;">
-
-   ![alt text](image.png)
-
-   ![alt text](image-1.png)
-
-   ![alt text](image-2.png)
+   <div style="display:flex;gap:10px; justify-content: space-evenly;flex-direction:row;">
+     
+      <img style="width:auto;height:300px" src="./image.png">
+     
+  
+      <img style="width:auto;height:300px" src="./image-1.png">
+  
+      <img style="width:auto;height:300px" src="./image-2.png">
+      
    </div>
 
    - Compila el smart contract: el archivo **FishmealTraceability.sol** es el smart contract, utiliza una herramienta para compilarlo, en mi caso utilicé el framework **Truffle** pero en otro entorno de nodejs. Los comandos que deberás ingresar son los siguietes:
