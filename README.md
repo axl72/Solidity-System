@@ -43,45 +43,26 @@ Block chain posee muchas ventajas como su seguridad, transparencia, inmutabilida
 
    - Compila el smart contract: el archivo **FishmealTraceability.sol** es el smart contract, utiliza una herramienta para compilarlo, en mi caso utilicé el framework **Truffle** pero en otro entorno de nodejs. Los comandos que deberás ingresar son los siguietes:
 
-<div style="color:white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); max-width: 400px; width: 100%;">
-    <div style="margin-bottom: 15px;">
-        <label for="prompt" style="display: block; margin-bottom: 5px; color: white;">Instalar Truffle</label>
-        <div id="prompt" name="prompt" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
-            npm i truffle -g
-        </div>
-    </div>
-  
-</div>
 
-<div style="color:white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); max-width: 400px; width: 100%;">
-    <div style="margin-bottom: 15px;">
-        <label for="prompt" style="display: block; margin-bottom: 5px; color: white;">Iniciar Truffle</label>
-        <div id="prompt" name="prompt" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
-            truffle init
-        </div>
-    </div>
-  
-</div>
+Instalar Truffle
+```shell
+npm i truffle -g
+```
 
-<div style="color:white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); max-width: 400px; width: 100%;">
-    <div style="margin-bottom: 15px;">
-        <label for="prompt" style="display: block; margin-bottom: 5px; color: white;">compilar el contrato</label>
-        <div id="prompt" name="prompt" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
-            truffle compile
-        </div>
-    </div>
-  
-</div>
+Iniciar Truffle
+```shell
+truffle init
+```
 
-<div style="color:white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); max-width: 400px; width: 100%;">
-    <div style="margin-bottom: 15px;">
-        <label for="prompt" style="display: block; margin-bottom: 5px; color: white;">Desplegar el contrato a la blockchain</label>
-        <div id="prompt" name="prompt" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
-            Truffle deploy
-        </div>
-    </div>
-  
-</div>
+Compilar el contrato
+```
+truffle compile
+```
+
+Desplegar el contrato a la blockchain
+```
+truffle deploy
+```
 
 4. En la carpeta encontrarás el json del contrato que utilicé en su momento. Reemplaza este json por el que has generado en la compilación.
 
@@ -101,5 +82,5 @@ const res = await fetch("https://arduino-client-production.up.railway.app/api/da
 
 // por esta línea
 
-const res = await fetch("https://localhost/api/data");
+const res = await fetch("https://localhost:3000/api/data");
 ```
